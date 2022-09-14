@@ -1,0 +1,30 @@
+<div class="content">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header"><h5 class="title">Kategori Ekle</h5></div>
+      <div class="card-body">
+        <form form [formGroup]="categoryAddForm">
+
+          <div class="form-group">
+            <input type="text" id="categoryName"
+            formControlName="categoryName"
+            class="form-control" placeholder="Kategori Adı"
+            />
+          </div>
+
+          <div class="form-group">
+            <input type="text" id="categoryDescription"
+            formControlName="categoryDescription"
+            class="form-control" placeholder="Kategori açıklaması"
+            />
+          </div>
+
+        </form>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-fill btn-primary" (click)="addCategory()">Ekle</button>
+      </div>
+    </div>
+  </div>
+
+</div>

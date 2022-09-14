@@ -1,0 +1,71 @@
+<div class="content">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header"><h5 class="title">Ürün Ekle</h5></div>
+      <div class="card-body">
+        <form form [formGroup]="productAddForm">
+          <div class="form-group">
+            <input type="text" id="productName"
+            formControlName="productName"
+            class="form-control" placeholder="Ürün Adı"
+            />
+          </div>
+
+          <div class="form-group">
+            <input type="text" id="productDescription"
+            formControlName="productDescription"
+            class="form-control" placeholder="Ürün açıklaması"
+            />
+          </div>
+          
+          <div class="form-group">
+            <input type="number" id="categoryId"
+            formControlName="categoryId"
+            class="form-control" placeholder="Kategori Id"
+            />
+          </div>
+          <div class="form-group">
+            <input type="number" id="colorId"
+            formControlName="colorId"
+            class="form-control" placeholder="Renk Id"
+            />
+          </div>
+          <div class="form-group">
+            <input type="number" id="brandId"
+            formControlName="brandId"
+            class="form-control" placeholder="Marka Id"
+            />
+          </div>
+          <div class="form-group">
+            <input type="number" id="price"
+            formControlName="price"
+            class="form-control" placeholder="Fiyatı"
+            />
+          </div>
+          <div class="form-group">
+            <input type="number" id="kullanımDurumuId"
+            formControlName="kullanımDurumuId"
+            class="form-control" placeholder="Kullanım Durumu Id"
+            />
+          </div>
+          <div class="form-group">
+            <input type="text" id="imgUrl"
+            formControlName="imgUrl"
+            class="form-control" placeholder="Ürün fotoğraf linki"
+            />
+          </div>
+           <div class="form-group">
+              <input type="checkbox" formControlName="offerOption" class="form-check-input"
+               id="offerOption">
+              <label class="form-check-label">teklif</label>
+          </div>
+
+        </form>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-fill btn-primary" (click)="add()">Ekle</button>
+      </div>
+    </div>
+  </div>
+
+</div>

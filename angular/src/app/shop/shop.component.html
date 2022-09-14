@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+
+    <section class="col-3">
+      <h5 class="text-warning ml-3">Kategoriler</h5>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let category of categories"
+        [class.active]="category.id===this.categoryIdSelected"
+        [value]="category.id"
+        (click)="onCategorySelected(category.id)">
+          {{category.categoryName}}
+        </li>
+       </ul>
+    </section>
+
+    <section class="col-9">
+     <div class="d-flex justify-content-end align-items-center pb-2">
+      <div class="form-inline mt-2">
+        <input type="text" class="form-control mr-2" placeholder="Search" style="width: 300px;">
+        <button class="btn btn-outline-primary my-2">Search</button>
+        <button class="btn btn-outline-success ml-2 my-2">Reset</button>
+      </div>
+     </div>
+      <div class="row">
+        <div class="col-md-4" *ngFor="let item of products">
+          <app-product-item [product]="item"></app-product-item>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
