@@ -41,7 +41,7 @@ namespace Business.Concrete
         private SmtpClient CreateSmtpClient()
         {
             SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-            smtp.Credentials = new NetworkCredential("forstajodev@gmail.com","yiivddtxkwzeabig");
+            smtp.Credentials = new NetworkCredential("forstajodev@gmail.com","");
             smtp.EnableSsl = true;
             //smtp.UseDefaultCredentials = false;
             return smtp;
